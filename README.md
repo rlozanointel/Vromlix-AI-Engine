@@ -1,8 +1,8 @@
-NEXUS GENESIS: Polymath Cognitive Architecture
+VROMLIX GENESIS: Polymath Cognitive Architecture
 "Simplicity is the ultimate sophistication." - Da Vinci.
 🚀 Overview
-Nexus Genesis is an enterprise-grade ETL (Extract, Transform, Load) pipeline designed to architect a personal "Second Brain". It serves as the intelligent backend for Nexus Prime (a custom Gemini Gem), enabling Dynamic Context Injection and Cross-Domain Reasoning.
-Unlike traditional RAG (Retrieval-Augmented Generation) systems that simply perform keyword search, Nexus employs a custom "Da Vinci Protocol". This approach prioritizes latent semantic connections, bridging disparate domains (e.g., applying Physics principles to Business Strategy) to emulate polymathic thinking.
+VROMLIX Genesis is an enterprise-grade ETL (Extract, Transform, Load) pipeline designed to architect a personal "Second Brain". It serves as the intelligent backend for VROMLIX Prime (a custom Gemini Gem), enabling Dynamic Context Injection and Cross-Domain Reasoning.
+Unlike traditional RAG (Retrieval-Augmented Generation) systems that simply perform keyword search, VROMLIX employs a custom "Da Vinci Protocol". This approach prioritizes latent semantic connections, bridging disparate domains (e.g., applying Physics principles to Business Strategy) to emulate polymathic thinking.
 🏗️ System Architecture
 The system operates on a Hybrid Cloud Architecture (Google Colab + Google Drive + Gemini API) utilizing four distinct cognitive modules:
 1. Module 1: The Refinery (Ingestion & Resilience)
@@ -29,7 +29,7 @@ Note: The 'Score' field enables automated filtering of high-value insights (Scor
 🛠️ Usage
 Configuration: Define GOOGLE_API_KEY (and optional backup keys GOOGLE_API_KEY_01, _02...) in your Environment Secrets.
 Ingestion: Place raw .txt files in the watched Chats_Nuevos directory.
-Execution: Run the NEXUS_GENESIS.ipynb pipeline.
+Execution: Run the VROMLIX_GENESIS.ipynb pipeline.
 Deployment: The system automatically updates the Master JSONL database and deploys the new CSV Index to the Gem's context folder.
 🔮 Future Roadmap
 Temporal Simulation: Query the Gem to simulate user responses from specific past years.
@@ -42,6 +42,4 @@ Resilience: Custom API Key Rotation Manager (Failover).
 Vector Engine: Sentence-Transformers (Hugging Face).
 Data Processing: Pandas, JSON, Regex.
 
-Architected by Roglio & Gemini.
-
-TRADEMARK NOTICE / AVISO DE MARCA "VROMLIX" and the VROMLIX logo are unregistered trademarks of Rogelio Lozano. While the source code of this project is available under the [MIT/Apache] license, this license does NOT grant you the right to use the "VROMLIX" name for derivative works, commercial products, or unrelated projects without explicit written permission. You may fork the code, but you must rename your fork.
+Architected by Roger & Gemini.
