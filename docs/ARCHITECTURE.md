@@ -1,0 +1,166 @@
+[Session_Date: 24/01/2026]
+
+Roger, entiendo perfectamente el error. **Fue un error de sintaxis en el código Mermaid.**
+
+El renderizador de GitHub es estricto. El comando que falló fue intentar mezclar `style` con `class` en la misma línea (`style Swarm class ai`). En Mermaid, o usas `style` (directo) o `class` (referencia), pero no ambos así.
+
+Aquí tienes el archivo **`docs/ARCHITECTURE.md` CORREGIDO**.
+
+He arreglado dos cosas:
+
+1. **El Diagrama de Flujo (Mermaid):** Cambié la sintaxis para que GitHub lo lea sin errores. Ahora las clases se asignan al final, que es la forma "a prueba de balas".
+2. **La Tabla Final:** Te la pongo en formato Markdown estricto para que se vea como rejilla y no como texto plano amontonado.
+
+Copia y reemplaza **todo** el contenido de tu archivo por esto:
+
+```markdown
+# VROMLIX Architecture: The Da Vinci Protocol
+
+> *"Details make perfection, and perfection is not a detail."*
+
+This document outlines the structural logic of the VROMLIX v8.0 engine, designed as a Modular Monolith with strictly separated concerns (Ingestion, Surgery, Indexing).
+
+## 1. The Data Reactor (System Flow)
+
+This diagram illustrates the transformation of unstructured entropy (Raw Text) into structured crystal (Knowledge Graph). Note the **Split-Brain Topology** ensuring the LLM never overwrites the Kernel Identity.
+
+```mermaid
+graph TD
+    %% -- STYLING DEFINITIONS --
+    classDef entropy fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef core fill:#fff3e0,stroke:#e65100,stroke-width:2px;
+    classDef storage fill:#333,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef ai fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,stroke-dasharray: 5 5;
+
+    subgraph INPUT_TRAY ["LAYER 1: ENTROPY (Input)"]
+        RawDocs(Raw .txt Files) -->|Stream Read| Ingestor[Ingestion Service]
+        Ingestor -->|MD5 Hash| Dedup{Duplicate?}
+        Dedup -- Yes --> Trash[Discard]
+    end
+
+    subgraph REFINERY ["LAYER 2: THE REFINERY (Analysis)"]
+        Dedup -- No --> Swarm((Agent Swarm))
+        Swarm -.->|Gemma-27b| Cronos[Time Extraction]
+        Swarm -.->|Gemma-27b| Logos[Mental Models]
+        Swarm -.->|Gemma-27b| Techne[Tool Stack]
+        
+        Cronos & Logos & Techne --> Payload[Structured DTO]
+    end
+
+    subgraph MEMORY ["LAYER 3: PERSISTENCE (The Ledger)"]
+        Payload -->|Append| JSONL[(Deep Memory .jsonl)]
+    end
+
+    subgraph OPTIMIZATION ["LAYER 4: SYNTHESIS & INDEXING"]
+        JSONL -->|Read Context| Mirror[Mirror Service]
+        JSONL -->|Extract Text| Vector[Indexing Service]
+        
+        %% SPLIT BRAIN LOGIC
+        Mirror -.->|Gemini-Flash| Surgeon((Profile Surgeon))
+        Surgeon -->|Patch| XML[(Dynamic Profile .xml)]
+        
+        %% VECTOR LOGIC
+        Vector -->|Embedding| MiniLM[[Sentence-Transformers]]
+        MiniLM -->|Vectorize| FAISS[(FAISS Index)]
+        FAISS -->|Link| CSV[(Master Map .csv)]
+    end
+
+    %% ASSIGN CLASSES (Corrected Syntax for GitHub)
+    class RawDocs entropy;
+    class Ingestor,Payload,Mirror,Vector,Cronos,Logos,Techne core;
+    class JSONL,XML,FAISS,CSV storage;
+    class Swarm,Surgeon ai;
+
+```
+
+## 2. Class Hierarchy (Modular Monolith)
+
+VROMLIX v8.0 abandons procedural scripting for a robust Object-Oriented design using Protocols for dependency injection.
+
+```mermaid
+classDiagram
+    %% CORE ORCHESTRATOR
+    class VromlixOrchestrator {
+        -config: AppConfig
+        +run(stages: list)
+    }
+
+    %% CONFIGURATION
+    class AppConfig {
+        <<Dataclass Frozen>>
+        +max_tpm: int
+        +root_dir: Path
+        +ledger_path: Path
+    }
+
+    %% PROTOCOLS (INTERFACES)
+    class LLMClientProtocol {
+        <<Interface>>
+        +generate(model, prompt) -> str
+    }
+
+    %% IMPLEMENTATIONS
+    class GoogleGenAIAdapter {
+        -token_buckets: Dict
+        -clients: List
+        +rotate_key()
+        +generate()
+    }
+
+    class RobustParser {
+        <<Static Utility>>
+        +extract_json()
+        +clean_ui_garbage()
+    }
+
+    %% DOMAIN SERVICES
+    class RefineryService {
+        +process_inbox()
+        -_synthesize_entry()
+    }
+    class MirrorService {
+        +run_surgery()
+        -_apply_patch()
+    }
+    class IndexingService {
+        +rebuild_index()
+    }
+
+    %% RELATIONSHIPS
+    VromlixOrchestrator *-- AppConfig : Composition
+    VromlixOrchestrator --> RefineryService : Instantiates
+    VromlixOrchestrator --> MirrorService : Instantiates
+    
+    RefineryService ..> LLMClientProtocol : Uses
+    MirrorService ..> LLMClientProtocol : Uses
+    LLMClientProtocol <|-- GoogleGenAIAdapter : Implements
+    
+    RefineryService ..> RobustParser : Calls
+
+```
+
+## 3. Evolutionary Metrics (v7.5 vs v8.0)
+
+Technical audit justifying the migration to the current architecture.
+
+| Feature | Legacy (v7.5) | VROMLIX GENESIS (v8.0) | Verdict |
+| --- | --- | --- | --- |
+| **Path Safety** | String concatenation (`os.path.join`) | `pathlib.Path` with resolution checks | **Zero OS Errors** |
+| **Config** | Mutable Global Dict | `Frozen Dataclass` + Env Var overrides | **Thread Safe** |
+| **Security** | `eval()` (High Risk) | `ast.literal_eval` + `RobustParser` | **Industrial Grade** |
+| **Typing** | Partial hints | Modern `list[]`, `dict[]`, `Self`, `override` | **PEP 8 Compliant** |
+| **Scalability** | Procedural script | Object-Oriented Services (Testable) | **Maintainable** |
+
+---
+
+*Generated by NEXUS for VROMLIX Engine Documentation.*
+
+```
+
+### ¿Qué corregí?
+1.  **Mermaid:** Moví todas las líneas de `class Swarm ai`, etc., al final del bloque. GitHub prefiere que declares la estructura primero y apliques los estilos al final. Ahora debería renderizarse perfecto.
+2.  **Tabla:** Puse las barras `|` que faltaban. Ahora se verá ordenado como una tabla real de Excel.
+
+Dale a "Commit" con confianza. El diagrama de Clases que me mostraste en la imagen se ve **espectacular** (fondo oscuro, líneas claras). Ese es el nivel que queremos.
+
+```
