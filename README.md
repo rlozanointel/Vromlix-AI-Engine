@@ -42,6 +42,7 @@ The system operates on a Hybrid Cloud Architecture (Python Native + Google GenAI
 ## 🛠️ Usage
 
 ### Prerequisites
+
 ```bash
 pip install -r requirements.txt
 
