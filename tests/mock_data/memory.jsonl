@@ -1,0 +1,1 @@
+{"id_hash": "e4f5g6h7", "origin_date": "2025-11-02", "title": "Neural Bridge Analysis", "assigned_category": "Engineering", "executive_summary": "Diagnosed vector latency. Proposed HNSW graphs.", "vromlix_dimensions": {"techne": {"tools": ["HNSW", "Vector DB"]}, "logos": {"mental_models": ["System 2 Thinking"]}}}
