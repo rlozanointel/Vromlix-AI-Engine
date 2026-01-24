@@ -1,45 +1,80 @@
-VROMLIX GENESIS: Polymath Cognitive Architecture
-"Simplicity is the ultimate sophistication." - Da Vinci.
-🚀 Overview
-VROMLIX Genesis is an enterprise-grade ETL (Extract, Transform, Load) pipeline designed to architect a personal "Second Brain". It serves as the intelligent backend for VROMLIX Prime (a custom Gemini Gem), enabling Dynamic Context Injection and Cross-Domain Reasoning.
-Unlike traditional RAG (Retrieval-Augmented Generation) systems that simply perform keyword search, VROMLIX employs a custom "Da Vinci Protocol". This approach prioritizes latent semantic connections, bridging disparate domains (e.g., applying Physics principles to Business Strategy) to emulate polymathic thinking.
-🏗️ System Architecture
-The system operates on a Hybrid Cloud Architecture (Google Colab + Google Drive + Gemini API) utilizing four distinct cognitive modules:
-1. Module 1: The Refinery (Ingestion & Resilience)
-Input: Unstructured data (WhatsApp logs, Raw Notes, Google Docs).
-The "Zipper Maneuver": Implements a custom merging algorithm that stitches raw narrative text with AI-generated metadata into a single, coherent JSON object.
-Enterprise Resilience (New in V4.1):
-JSON-Schema Enforcement: Forces the LLM to output strict JSON Arrays, eliminating parsing errors common in raw text processing.
-Auto-Failover Protocol: Features an Intelligent Key Rotator. If the primary API Key hits a Rate Limit (429 Error), the system automatically swaps to a backup identity in milliseconds, ensuring zero downtime during batch processing.
-Temporal Logic: Automatically infers "Status" (Legacy vs. Current) to handle contradictory data over time (e.g., updating beliefs or job status).
-2. Module 2: The Evolutionary Mirror
-Function: Manages the perfil_dinamico.xml artifact.
-Logic: A recursive feedback loop that analyzes the user's most recent "Current" thoughts against their historical "Legacy" profile. It resolves psychological and professional contradictions automatically (Last-in Wins strategy) to maintain an up-to-date user persona.
-3. Module 3: The Neural Weaver (Semantic Graph)
-Function: Constructs the hidden connective tissue of the brain.
-Technology: Utilizes SentenceTransformers (all-MiniLM-L6-v2) to generate high-dimensional vector embeddings and calculate Cosine Similarity matrices.
-Cognitive Routing: Classifies connections as either "Reinforcement" (Same Domain) or "Polymath" (Cross-Domain), enriching the Knowledge Graph with non-obvious links.
-4. Module 4: The Cartographer (High-Speed Indexing)
-Function: Generates a lightweight navigation map (00_INDICE_GENERADO.csv).
-Purpose: Provides the LLM with a "Table of Contents" of the user's mind. This allows the Gem to "scan" the entire knowledge base structure to select the correct files before performing deep retrieval, optimizing context window usage.
-📊 Output Schema (CSV Index)
-The system enforces a strict quality control schema for the navigation index:
-ID_Hash | Title | Role | Score (1-5) | Status | Summary | Key_Connections
-Note: The 'Score' field enables automated filtering of high-value insights (Score 5) vs. trivial daily logs.
-🛠️ Usage
-Configuration: Define GOOGLE_API_KEY (and optional backup keys GOOGLE_API_KEY_01, _02...) in your Environment Secrets.
-Ingestion: Place raw .txt files in the watched Chats_Nuevos directory.
-Execution: Run the VROMLIX_GENESIS.ipynb pipeline.
-Deployment: The system automatically updates the Master JSONL database and deploys the new CSV Index to the Gem's context folder.
-🔮 Future Roadmap
-Temporal Simulation: Query the Gem to simulate user responses from specific past years.
-Psychological Audit: Automated detection of bias shifts over time.
-Content Synthesis: Generation of articles mimicking the user's specific writing style and worldview.
-💻 Tech Stack
-Core: Python 3.10+
-LLM: Google Gemini 3.0 / 2.0 Flash (via Google GenAI SDK).
-Resilience: Custom API Key Rotation Manager (Failover).
-Vector Engine: Sentence-Transformers (Hugging Face).
-Data Processing: Pandas, JSON, Regex.
 
-Architected by Roger & Gemini.
+# VROMLIX: AI Engine & Cognitive Orchestrator
+
+> *"Simplicity is the ultimate sophistication." - Da Vinci*
+
+## 🚀 Overview
+**VROMLIX Engine** (v8.0.0) is an enterprise-grade Cognitive ETL pipeline designed to architect a personal "Second Brain". Unlike traditional RAG systems that rely on simple keyword search, VROMLIX employs a **Greedy Vectorization Strategy** and a **Split-Brain Topology** to build a persistent, high-fidelity Knowledge Graph.
+
+It acts as the backend orchestration layer, transforming unstructured entropy (logs, notes, docs) into structured, retrieval-ready vectors.
+
+### 📐 System Design
+This engine has been refactored from a procedural script into a **Modular Monolith** using strict Python 3.12+ typing and Dependency Injection.
+
+👉 **[View Full System Architecture & Logic Flow](./docs/ARCHITECTURE.md)**
+
+## 🏗️ Core Modules: Da Vinci Protocol v8.0
+
+The system operates on a Hybrid Cloud Architecture (Python Native + Google GenAI SDK + FAISS), orchestrating three core services:
+
+### Service 1: The Refinery (Micro-Analysis Layer)
+* **Engine:** `gemma-3-27b-it` (Atomic Extraction).
+* **Function:** Ingests raw text and extracts deep metadata dimensions:
+    * *Cronos:* Temporal anchoring and sequence logic.
+    * *Logos/Pathos:* Belief systems, mental models, and emotional tone.
+    * *Techne:* Tool stacks and technical solutions.
+* **Resilience:** Features a **RobustParser** class that sanitizes "dirty" LLM outputs and handles JSON anomalies automatically.
+
+### Service 2: The Mirror (Profile Surgery Layer)
+* **Engine:** `gemini-3-flash-preview` (Macro-Synthesis).
+* **Safety Protocol - Kernel Isolation:** Implements a "Split-Brain" technique. The Orchestrator physically separates the Profile XML into `Static` (Immutable) and `Dynamic` (Mutable) blocks. The LLM *never* has write access to the core kernel, preventing "hallucination drift".
+
+### Service 3: The Neural Weaver (Greedy Vectorization)
+* **Engine:** Sentence-Transformers (`all-MiniLM-L6-v2`) + FAISS.
+* **Strategy:** "If it's not vectorized, it doesn't exist."
+    Instead of summarizing, the indexing engine concatenates deeply extracted metadata into a dense vector payload. This creates an **"Engram-like"** retrieval system, prioritizing hard concepts (N-Grams) over soft narrative.
+
+## 📊 Data Structures
+* **The Ledger (JSONL):** A strictly formatted, append-only database of every interaction.
+* **The Map (CSV):** A lightweight, human-readable index with "Deep Context" snippets for rapid auditing.
+* **The Profile (XML):** A dynamic ontology of the user's state, hardware constraints, and operational preferences.
+
+## 🛠️ Usage
+
+### Prerequisites
+```bash
+pip install -r requirements.txt
+
+```
+
+### Execution (CLI)
+
+The v8.0 engine supports argument parsing for modular execution:
+
+```bash
+# Full Pipeline (Ingest -> Surgery -> Index)
+python main.py --run-all
+
+# Modular Execution (e.g., only rebuild vector index)
+python main.py --index
+
+```
+
+## 🔮 Roadmap & Version History
+
+* **v6.0 (Genesis):** Initial script with basic RAG.
+* **v7.5 (Active Inference):** Introduction of XML "Split-Brain" logic.
+* **v8.0 (Current - Industrial Standard):** Complete refactor to OOP, Python 3.12+ Typing, `pathlib` safety, and migration to Google GenAI SDK v0.5.
+* **v9.0 (Future - Voice Core):** Direct audio stream processing for real-time debate simulation.
+
+## 💻 Tech Stack
+
+* **Orchestration:** Python 3.12+ (Type Hinted).
+* **LLM Inference:** Google GenAI SDK (Unified Client).
+* **Vector Database:** FAISS (CPU Optimized).
+* **Serialization:** JSONL (Ledger) & XML (Profile).
+
+---
+
+*Architected by Rogelio Lozano.*
+
