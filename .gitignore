@@ -1,0 +1,25 @@
+# --- Python Artifacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Environments ---
+.env
+venv/
+env/
+
+# --- Vromlix Data (SECURITY) ---
+# Never commit raw data or memory logs
+00_input_tray/
+01_active_memory/
+*.jsonl
+*.xml
+*.csv
+
+# --- Secrets ---
+api_keys.txt
+
+# --- OS & Editor Files ---
+.DS_Store
+.vscode/
+.idea/
