@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vromlix_profile>
+    <static_kernel>
+        <identity>Mock User</identity>
+    </static_kernel>
+    <dynamic_patches>
+        <user_context>
+            <role>Systems Architect</role>
+            <hardware>Cloud Cluster</hardware>
+        </user_context>
+        <operational_preferences>
+            <methodology>Agile</methodology>
+        </operational_preferences>
+    </dynamic_patches>
+</vromlix_profile>
