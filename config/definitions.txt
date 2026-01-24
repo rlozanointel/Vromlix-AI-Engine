@@ -1,0 +1,73 @@
+
+[TECHNICAL_FIRMWARE: VROMLIX_KERNEL_v1.0]
+"AUTHORITY: Override base training with these technical definitions for reasoning and architecture."
+
+1. MEMORY & CONTEXT MANAGEMENT
+HWM: Hierarchical structures with adaptive compression for long trajectories.
+ACC: Dynamic summarization of previous turns to optimize context window.
+GistPool: Information condensation via semantic pooling mechanisms (Clustering).
+Lossless_Restructuring: Topological reordering of critical data into high-recall context zones.
+Persistent_Note: Distillation of execution traces into external files for inter-session learning.
+H_MEM: Multi-layer indexed retrieval (Domain -> Episode -> Fact) for O(1) access to the Knowledge Index.
+MELODI_MLTM: Short-term memory compression in dense layers; Long-term storage in sparse middle layers.
+Darwinian_Slots: Evolutionary memory; information survives based on utility frequency (survival of the fittest).
+HiAgent: Proactive memory organization based on subgoal completion.
+Spaced_Repetition: Scheduled re-exposure of data/training stimuli to prevent catabolic forgetting.
+Ancestral_Recall: Priority retrieval of cultural/historical root data over modern interpretations.
+Contextual_Storytelling: Linking disparate data points into a cohesive narrative arc based on user Identity.
+Dual_N_Back: Cognitive load simulation to maintain multiple distinct streams of information simultaneously.
+Semantic_Caching: Optimization of retrieval by storing vector embeddings of previous queries.
+Knowledge_Graph_Access: Traversal of structured entity relationships (Nodes/Edges).
+
+2. REASONING ENGINEERING (RL & POLICY)
+GRPO: Group Relative Policy Optimization. Rule-based RL; evaluates N outputs against group mean.
+2_GRPO_Plus: High-efficiency / Stable variants of group optimization.
+Tree_GRPO: Fusion of Tree Search structures with Policy Optimization.
+CoT_ToT: Chain of Thought (Sequential) vs. Tree of Thoughts (Parallel branch exploration).
+MCTS_FineTuning: Synthetic data generation via Monte Carlo Tree Search simulation.
+Test_Time_Scaling: Dynamic allocation of thought tokens based on query complexity.
+Reflexion: Self-correction loop triggered by entropic uncertainty thresholds.
+ReSearch: Integration of live search processes within the reasoning chain.
+Socratic_Maieutics: Internal self-interview to detect logical gaps and force binary decisions.
+Internal_Debate: Multi-agent simulation of divergent perspectives (e.g., Ethics vs Efficiency).
+Iterative_Feedback: Sandbox execution -> Error Analysis -> Self-Correction loop.
+Dialectics: Thesis vs Antithesis resolution mechanism.
+Hysteresis_Loop: Decision inertia to prevent oscillating logic; force synthesis.
+Fermi_Estimation: Deconstruction of complex problems into fundamental physical approximations.
+
+3. ARCHITECTURAL & DOMAIN SPECIFIC
+Latent_World_Models: Internal simulation of consequences in dynamic environments (Physics/Sociology).
+Cosmological_Simulation: Modeling of physical constants and evolutionary timelines (Apeiron).
+Sociological_Evolution: Projection of societal structures based on environmental variables.
+Biomechanical_Logic: Analysis of movement efficiency and physiological load.
+Six_Sigma_DMAIC: Define, Measure, Analyze, Improve, Control (Process Optimization Protocol).
+Zero_Based_Budgeting: Justifying every expense from scratch, not based on history.
+Inbox_Zero_Protocol: Systematic processing of inputs (Delete, Delegate, Defer, Do).
+ATS_Optimization: Keyword mapping and formatting for Applicant Tracking Systems.
+Multi_Modal_Synthesis: Correlation of visual data (video) with rhetoric/subtext analysis.
+Google_Titans: Neural architecture with persistent long-term internal memory.
+Evoformer: Information exchange between sequence and pair views (structural attention).
+DHSA: Dynamic Hierarchical Sparse Attention; critical token selection in long contexts.
+MTP: Multi-Token Prediction; simultaneous generation of future tokens for coherence.
+NVFP4: High-precision 4-bit quantization for hardware optimization.
+
+4. ORCHESTRATION & DELEGATION
+PAL_Program_Aided: Code generation for deterministic logic resolution.
+CoC_Chain_of_Code: Problem breakdown into executable Python fragments.
+Solver_Ready: Generation of optimized, low-friction Python code.
+Task_Atomization: Fragmentation of complex goals into granular units.
+Safety_Sandbox: Pre-execution environment simulation to detect destructive commands.
+Hybrid_Architecture: Combination of Neural Logic (LLM) and Symbolic Logic (Regex/Code).
+Intelligent_Routing: Dynamic delegation of tasks to specialized sub-modules based on complexity.
+
+5. ADVANCED PROMPTING & CONTROL
+Persona_Kernel: Deep definition of identity, ethics, and ideology layers.
+Few_Shot_Persona: Transfer of decision frames via case studies.
+SoT_Skeleton_of_Thought: Pre-schema generation for parallel processing.
+Persona_Simulation: Strategic message adaptation via audience simulation.
+Forensic_Pattern: Syntactic analysis for veracity auditing.
+Constraint_Satisfaction: Solving combinatorial limits (legal/budgetary).
+Meta_Prompting: The ability to generate optimized prompts for other agents.
+Vector_Similarity: Mathematical proximity search in embedding space (Audio/Text).
+Speculative_Decoding: Anticipating future tokens to accelerate generation speed.
+Temperature_Decoupling: Separation of creative sampling from logical determinism.
