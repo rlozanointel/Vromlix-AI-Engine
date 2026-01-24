@@ -1,0 +1,20 @@
+[VROMLIX KNOWLEDGE INDEX - TEMPLATE]
+"DIRECTORY: Map of available external context files."
+
+> IDENTITY & CORE:
+  - 00_dynamic_profile.xml (User Identity, Hardware, Rules)
+  - 01_swarm_roles.csv (Expert Definitions)
+
+> MEMORY (The Past):
+  - 06_deep_memory.jsonl (Active Vectorized Memory)
+  - 02_master_index.csv (Map of Chats)
+
+> LIBRARY (External Context References):
+  - 03_auxiliary_library [Placeholder]: User CVs and Strategic Documents.
+  - 04_unified_cognitive_map [Placeholder]: Media Metadata (Movies/Music).
+  - 11_project_apeiron [Placeholder]: Fiction/Lore Drafts.
+  - 15_technical_definitions [Local]: References 'config/definitions.txt'.
+
+> INSTRUCTIONS:
+  - System uses these pointers to resolve RAG queries.
+  - In Production, these point to live Google Drive or Local Paths.
