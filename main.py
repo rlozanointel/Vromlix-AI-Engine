@@ -215,7 +215,7 @@ class RobustParser:
             pass
 
         # 2. Try Regex Extraction
-        match = re.search(r'\{.*\}', text, re.DOTALL)
+        match = re.search(r'(\{[\s\S]*\})', text)
         if match:
             json_str = match.group()
             try:
@@ -612,8 +612,16 @@ class MirrorService:
         try:
             tree = ET.parse(self.config.profile_file)
             root = tree.getroot()
-            node = root.find("dynamic_patches")
-            return "".join([ET.tostring(c, encoding='unicode') for c in node]) if node is not None else ""
+            context_nodes = []
+            for tag in ["active_status", "cognitive_model"]:
+                node = root.find(tag)
+                if node is not None:
+                    context_nodes.append(ET.tostring(node, encoding='unicode'))
+            
+            patches_node = root.find("dynamic_patches")
+            patches_str = "".join([ET.tostring(c, encoding='unicode') for c in patches_node]) if patches_node is not None else ""
+            
+            return "\n".join(context_nodes) + "\n<dynamic_patches>\n" + patches_str + "\n</dynamic_patches>"
         except ET.ParseError:
             return ""
 
