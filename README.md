@@ -4,7 +4,7 @@
 > *"Simplicity is the ultimate sophistication." - Da Vinci*
 
 ## 🚀 Overview
-**VROMLIX Engine** (v8.3.0) is an enterprise-grade Cognitive ETL pipeline designed to architect a personal "Second Brain". Unlike traditional RAG systems that rely on simple keyword search, VROMLIX employs a **Greedy Vectorization Strategy** and a **Split-Brain Topology** to build a persistent, high-fidelity Knowledge Graph.
+**VROMLIX Engine** v8.3.1 (Enterprise Refactor) is an enterprise-grade Cognitive ETL pipeline designed to architect a personal "Second Brain". Unlike traditional RAG systems that rely on simple keyword search, VROMLIX employs a **Greedy Vectorization Strategy** and a **Split-Brain Topology** to build a persistent, high-fidelity Knowledge Graph.
 
 It acts as the backend orchestration layer, transforming unstructured entropy (logs, notes, docs) into structured, retrieval-ready vectors.
 
