@@ -4,7 +4,7 @@
 > *"Simplicity is the ultimate sophistication." - Da Vinci*
 
 ## 🚀 Overview
-**VROMLIX Engine** (v8.0.0) is an enterprise-grade Cognitive ETL pipeline designed to architect a personal "Second Brain". Unlike traditional RAG systems that rely on simple keyword search, VROMLIX employs a **Greedy Vectorization Strategy** and a **Split-Brain Topology** to build a persistent, high-fidelity Knowledge Graph.
+**VROMLIX Engine** (v8.3.0) is an enterprise-grade Cognitive ETL pipeline designed to architect a personal "Second Brain". Unlike traditional RAG systems that rely on simple keyword search, VROMLIX employs a **Greedy Vectorization Strategy** and a **Split-Brain Topology** to build a persistent, high-fidelity Knowledge Graph.
 
 It acts as the backend orchestration layer, transforming unstructured entropy (logs, notes, docs) into structured, retrieval-ready vectors.
 
@@ -13,7 +13,7 @@ This engine has been refactored from a procedural script into a **Modular Monoli
 
 👉 **[View Full System Architecture & Logic Flow](./docs/ARCHITECTURE.md)**
 
-## 🏗️ Core Modules: Da Vinci Protocol v8.0
+## 🏗️ Core Modules: Da Vinci Protocol v8.3
 
 The system operates on a Hybrid Cloud Architecture (Python Native + Google GenAI SDK + FAISS), orchestrating three core services:
 
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 
 ### Execution (CLI)
 
-The v8.0 engine supports argument parsing for modular execution:
+The v8.3 engine supports argument parsing for modular execution:
 
 ```bash
 # Full Pipeline (Ingest -> Surgery -> Index)
@@ -65,7 +65,7 @@ python main.py --index
 
 * **v6.0 (Genesis):** Initial script with basic RAG.
 * **v7.5 (Active Inference):** Introduction of XML "Split-Brain" logic.
-* **v8.0 (Current - Industrial Standard):** Complete refactor to OOP, Python 3.12+ Typing, `pathlib` safety, and migration to Google GenAI SDK v0.5.
+* **v8.3 (Current - Enterprise Refactor):** Strict PEP 8, Type Safety, Atomic I/O, and XML v8.1 Schema Integration.
 * **v9.0 (Future - Voice Core):** Direct audio stream processing for real-time debate simulation.
 
 ## 💻 Tech Stack
