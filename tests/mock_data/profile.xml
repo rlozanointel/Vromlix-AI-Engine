@@ -6,6 +6,15 @@
     <user_context identity="Mock User">
         <security_profile context="Academic"/>
     </user_context>
+    <cognitive_model>
+        <interaction_core style="Precision_Sync"/>
+    </cognitive_model>
+    <active_status>
+        <professional_goals role="Data Analyst"/>
+    </active_status>
+    <family_matrix role="Father">
+        <core_functions>Mentor, Role Model</core_functions>
+    </family_matrix>
     <dynamic_patches>
-        </dynamic_patches>
+    </dynamic_patches>
 </vromlix_profile>
