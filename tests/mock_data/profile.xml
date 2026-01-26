@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<vromlix_profile>
-    <static_kernel>
-        <identity>Mock User</identity>
-    </static_kernel>
+<vromlix_profile version="8.1">
+    <system_kernel>
+        <identity name="VROMLIX PRIME"/>
+    </system_kernel>
+    <user_context identity="Mock User">
+        <security_profile context="Academic"/>
+    </user_context>
     <dynamic_patches>
-        <user_context>
-            <role>Systems Architect</role>
-            <hardware>Cloud Cluster</hardware>
-        </user_context>
-        <operational_preferences>
-            <methodology>Agile</methodology>
-        </operational_preferences>
-    </dynamic_patches>
+        </dynamic_patches>
 </vromlix_profile>
