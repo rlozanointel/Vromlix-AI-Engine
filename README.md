@@ -1,6 +1,8 @@
 
 # VROMLIX: AI Engine & Cognitive Orchestrator
 
+> ⚠️ **ARCHITECTURAL NOTE:** This repository represents the V1/Legacy prototype of the cognitive extraction engine. It serves as a historical record of the system's evolution. **For the current State-of-the-Art (SOTA) architecture, optimized for deterministic edge-computing (Sub-8GB RAM), please visit the main repository: [vromlix-cognitive-architecture](https://github.com/rlozanointel/vromlix-cognitive-architecture).**
+
 > *"Simplicity is the ultimate sophistication." - Da Vinci*
 
 ## 🚀 Overview
