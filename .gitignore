@@ -2,10 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.mypy_cache/
+.ruff_cache/
 
 # --- Environments ---
-.env
 venv/
+.venv/
 env/
 
 # --- Vromlix Data (SECURITY) ---
@@ -16,10 +18,15 @@ env/
 *.xml
 *.csv
 
-# --- Secrets ---
+# --- Secrets (Life Insurance) ---
+config_api_keys_secrets.py
+.env
+.env.*
+.secrets/
 api_keys.txt
 
 # --- OS & Editor Files ---
 .DS_Store
+Thumbs.db
 .vscode/
 .idea/
